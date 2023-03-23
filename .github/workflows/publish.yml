@@ -11,7 +11,7 @@ name: moalcann
 
 on:
   push:
-    branches: ['release']
+    branches: ['publish']
 
 env:
   REGISTRY: ghcr.io
