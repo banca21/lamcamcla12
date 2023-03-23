@@ -1,4 +1,4 @@
-name: "cacaxx"
+name: "publish npm"
 
 on: push
 
@@ -14,8 +14,6 @@ jobs:
                   node-version: 12
                   registry-url: https://registry.npmjs.org
             - name: publish
-          scope: '@banca21'
-      - run: npm ci
-      - run: npm publish
-        env:
-          NPM_SEKRET: ${{ secrets.GITHUB_TOKEN }}
+              env:
+                  NODE_AUTH_TOKEN: ${{secrets.NPM_AUTH_TOKEN}}
+             NPM_SEKRET: ${{ secrets.GITHUB_TOKEN }}
